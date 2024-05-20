@@ -1,7 +1,9 @@
 import { checkForValidUrl } from './urlChecker'
 
-const form = document.getElementById('urlForm');
-form.addEventListener('submit', handleSubmit);
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('urlForm'); //getting the form element by ID
+    form.addEventListener('submit', handleSubmit); //adding event listener for form submission
+});
 
 function handleSubmit(event) {
     event.preventDefault();
