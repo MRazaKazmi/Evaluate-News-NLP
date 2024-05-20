@@ -29,10 +29,9 @@ app.post('/api', async (req, res) => {
     try{
         const response = await fetch(`${baseUrl}?key=${apiKey}&url=${req.body.url}&lang=en`);
         const data = await response.json();
-        console.log(data)
         res.send(data);
     }catch(error){
-        console.log('errorRetrieveData', error);
+        console.log('error:', error);
     }
 })
 
